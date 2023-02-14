@@ -57,18 +57,6 @@ minetest.register_globalstep(function(dtime)
     end
 end)
 
-minetest.register_on_joinplayer(function(player)
-    player:set_physics_override({gravity = 0})
-end)
-
-minetest.register_on_leaveplayer(function(player)
-    player:set_physics_override({gravity = 1})
-end)
-
-minetest.register_on_respawnplayer(function(player)
-    player:set_physics_override({gravity = 0})
-end)
-
 minetest.register_globalstep(function(dtime)
     local player_list = minetest.get_connected_players()
     for i = 1, #player_list do
@@ -82,4 +70,3 @@ minetest.register_globalstep(function(dtime)
         end
     end
 end)
-
