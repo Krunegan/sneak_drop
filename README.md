@@ -2,6 +2,8 @@
 
 Pick up all items on the ground in a 3 block radius by holding sneak.
 
+![Image](/screenshot.png)
+
 ## License
 
 #### Code
