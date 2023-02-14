@@ -41,13 +41,15 @@ minetest.register_globalstep(function(dtime)
                     local objdist = vector.distance(pos, objpos)
                     if objdist < 1 then
                         local itemstack = obj:get_luaentity().itemstring
-                        player:get_inventory():add_item("main", itemstack)
-                        obj:remove()
-                        minetest.sound_play("sneak_drop_pickup", {
-                            pos = pos,
-                            max_hear_distance = 16,
-                            gain = 0.4,
-                        })
+                        if player:get_inventory():room_for_item("main", itemstack) then
+                            player:get_inventory():add_item("main", itemstack)
+                            obj:remove()
+                            minetest.sound_play("sneak_drop_pickup", {
+                                pos = pos,
+                                max_hear_distance = 16,
+                                gain = 0.4,
+                            })
+                        end
                     else
                         obj:set_velocity(vector.multiply(objdir, -pickup_speed))
                     end
