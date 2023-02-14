@@ -2,14 +2,14 @@
 
 Pick up all items on the ground in a 3 block radius by holding sneak.
 
-![Image](/screenshot.png)
+![Image](/screenshot.gif)
 
 ## License
 
-# Code
+### Code
 * MIT License (MIT) for the code.
 
-# Sounds
+### Sounds
 Creative Commons 0 License, BranndyBottle, https://freesound.org
 
 * sneak_drop_pickup.ogg
